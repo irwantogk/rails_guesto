@@ -1,12 +1,9 @@
-<div id="<%= dom_id greeting %>">
-  <p>
-    <strong>Name:</strong>
-    <%= greeting.name %>
-  </p>
-
-  <p>
-    <strong>Message:</strong>
-    <%= greeting.message %>
-  </p>
-
+<div id="<%= dom_id greeting %>" class="mb-2">
+  <div class="media">
+    <img src="<%= gravatarized_url(greeting.name) %>" class="align-self-start mr-3" />
+    <div class="media-body">
+      <h5 class="mt-0"><%= greeting.name %></h5>
+      <%= greeting.message %>
+    </div>
+  </div>
 </div>

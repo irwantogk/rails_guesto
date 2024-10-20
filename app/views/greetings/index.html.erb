@@ -4,13 +4,13 @@
 
 <h1>Greetings</h1>
 
+<%= render("form", greeting: Greeting.new) %>
+
 <div id="greetings">
   <% @greetings.each do |greeting| %>
     <%= render greeting %>
-    <p>
+    <!--<p>
       <%= link_to "Show this greeting", greeting %>
-    </p>
+    </p>-->
   <% end %>
 </div>
-
-<%= link_to "New greeting", new_greeting_path %>
